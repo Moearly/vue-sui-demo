@@ -25,14 +25,14 @@ function generateExtractLoaders (loaders) {
   }).join('!')
 }
 
-config.vue.loaders = {
-  js: 'babel!eslint',
-  // http://vuejs.github.io/vue-loader/configurations/extract-css.html
-  css: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css'])),
-  less: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css', 'less'])),
-  sass: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css', 'sass'])),
-  stylus: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css', 'stylus']))
-}
+//config.vue.loaders = {
+//  js: 'babel!eslint',
+//  // http://vuejs.github.io/vue-loader/configurations/extract-css.html
+//  css: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css'])),
+//  less: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css', 'less'])),
+//  sass: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css', 'sass'])),
+//  stylus: ExtractTextPlugin.extract('vue-style-loader', generateExtractLoaders(['css', 'stylus']))
+//}
 
 config.output.publicPath = '/'
 

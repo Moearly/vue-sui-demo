@@ -28,10 +28,15 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue'
       },
+      //{
+      //  test: /\.js$/,
+      //  loader: 'babel!eslint',
+      //  exclude: /node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//
+      //},
       {
         test: /\.js$/,
-        loader: 'babel!eslint',
-        exclude: /node_modules|vue\/dist|vue-router\/|vue-loader\/|vue-hot-reload-api\//
+        loader: 'babel?presets=es2015',
+        exclude: /node_modules/
       },
       {
         test: /\.json$/,
@@ -55,13 +60,13 @@ module.exports = {
       }
     ]
   },
-  vue: {
-    loaders: {
-      js: 'babel!eslint',
-      less: 'vue-style!css!less',
-      sass: 'vue-style!css!sass'
-    }
-  },
+  //vue: {
+  //  loaders: {
+  //    js: 'babel!eslint',
+  //    less: 'vue-style!css!less',
+  //    sass: 'vue-style!css!sass'
+  //  }
+  //},
   eslint: {
     formatter: require('eslint-friendly-formatter')
   }
